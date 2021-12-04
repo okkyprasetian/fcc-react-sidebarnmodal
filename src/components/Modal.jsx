@@ -11,7 +11,7 @@ function Modal({ showModal, toggleShowModal }) {
                     </button>
                 </div>
                 <div className="modal-body">
-                    Hello Darkness
+                    Hello Buddy
                 </div>
             </div>
         </div>

@@ -2,7 +2,10 @@
 
 :root {
   --red-dark: #990000;
-  --black: #191919;
+  --black: #472747;
+  --violet-white: #fdf3fd;
+  --violet-light: #fce6fc;
+  --violet-icon: #a75ba7;
 }
 
 * {
@@ -43,7 +46,7 @@ button {
 /* Home */
 .home {
   height: 100vh;
-  background-color: white;
+  background-color: var(--violet-white);
   z-index: 0;
 }
 
@@ -69,13 +72,13 @@ button {
 }
 
 .btn-open-modal {
-  width: 10rem;
-  height: 1.7rem;
-  border: black 2px solid;
+  width: 12rem;
+  height: 2rem;
+  border: black 0.15rem solid;
   border-radius: 0.5rem;
-  font-family: monospace;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.1rem;
-  color: white;
+  color: var(--violet-white);
   background-color: black;
   cursor: pointer;
   transition: all 300ms ease;
@@ -83,7 +86,7 @@ button {
 
 .btn-open-modal:hover {
   color: black;
-  background-color: white;
+  background-color: inherit;
 }
 
 
@@ -97,8 +100,7 @@ button {
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
-  transition: all 500ms ease;
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: -1;
 }
 
@@ -111,6 +113,7 @@ button {
   padding: 1rem;
   padding-bottom: 3rem;
   border-radius: 0.5rem;
+  color: #180d18;
   background-color: white;
 }
 
@@ -122,7 +125,7 @@ button {
 
 .btn-close-modal {
   font-size: 1.5rem;
-  color: red;
+  color: var(--red-dark);
 }
 
 .modal-body {
@@ -142,10 +145,11 @@ button {
   left: 0;
   width: 100vw;
   height: 100vh;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   background-color: white;
   z-index: 1;
   transition: all 500ms ease;
-  transform: translateX(-100%);
+  transform: translateX(-110%);
 }
 
 .show-sidebar {
@@ -160,7 +164,13 @@ button {
 }
 
 .sidebar-logo {
+  color: #f08ff0;
   font-size: 2rem;
+  text-shadow: 0.3rem 0.3rem 0.2rem rgba(0, 0, 0, 0.2);
+}
+
+.okky {
+  color: #180d18;
 }
 
 .btn-close-sidebar {
@@ -170,11 +180,62 @@ button {
 
 .sidebar-body {
   height: 80vh;
+  padding-top: 2rem;
+}
+
+.sidebar-list {
+  display: flex;
+  align-items: center;
+  height: 4rem;
+  padding-left: 2rem;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+}
+
+.sidebar-list * {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.sidebar-list:hover {
+  background-color: var(--violet-light);
 }
 
 .sidebar-footer {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   height: 10vh;
+}
+
+.sidebar-footer * {
+  margin: 0 0.2rem;
+}
+
+.sidebar-social {
+  font-size: 1.7rem;
+  color: var(--violet-icon)
+}
+
+@media screen and (min-width: 800px) {
+
+  /* Global */
+  :root {
+    font-size: 17px;
+  }
+
+  /* Modal */
+  .modal-main {
+    width: 40%;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    width: 30vw;
+  }
+
+  .sidebar-list {
+    height: 3.5rem;
+    font-size: 1.2rem;
+  }
 }
