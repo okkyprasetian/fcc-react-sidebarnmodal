@@ -1,4 +1,10 @@
 /* Global */
+
+:root {
+  --red-dark: #990000;
+  --black: #191919;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +13,7 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  color: var(--black);
 }
 
 .btn {
@@ -68,17 +75,45 @@ body {
 
 /* Modal */
 .modal {
-  background-color: black;
-  opacity: 0.2;
+  position: absolute;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-main {
-  opacity: 1;
-  color: white;
+  width: 90%;
+  padding: 1rem;
+  padding-bottom: 3rem;
+  border-radius: 0.5rem;
+  background-color: white;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: flex-end;
+  height: 2rem;
+}
+
+.btn-close-modal {
+  border: none;
+  font-size: 1.5rem;
+  color: red;
+  background-color: inherit;
+}
+
+.modal-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 
 /* Sidebar */
-.sidebar {
-  display: none;
-}
+.sidebar {}
