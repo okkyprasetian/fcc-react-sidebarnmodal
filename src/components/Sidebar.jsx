@@ -2,14 +2,14 @@
 import React from 'react'
 import { FaTimes } from 'react-icons/fa'
 
-function Sidebar() {
+function Sidebar({ showSidebar, toggleShowSidebar }) {
     return (
-        <aside className="sidebar">
+        <aside className={`sidebar ${showSidebar && 'show-sidebar'}`}>
             <div className="sidebar-header">
                 <div className="sidebar-logo">
                     Okky Prasetia
                 </div>
-                <button className="btn btn-close-sidebar">
+                <button className="btn btn-close-sidebar" onClick={toggleShowSidebar}>
                     <FaTimes />
                 </button>
             </div>
