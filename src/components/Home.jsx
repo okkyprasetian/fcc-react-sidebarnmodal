@@ -10,7 +10,7 @@ function Home() {
                 </button>
             </div>
             <div className="main">
-                <button className="btn btn-open-modal">
+                <button className="btn-open-modal">
                     Open Modal
                 </button>
             </div>
