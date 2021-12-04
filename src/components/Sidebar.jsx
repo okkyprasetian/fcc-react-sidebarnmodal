@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import { FaTimes } from 'react-icons/fa'
 
@@ -13,7 +14,7 @@ function Sidebar() {
                 </button>
             </div>
             <ul className="sidebar-body">
-                home
+                <li><a href="#">Home</a></li>
             </ul>
             <ul className="sidebar-footer">
                 Social

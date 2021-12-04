@@ -16,6 +16,20 @@ body {
   color: var(--black);
 }
 
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  background-color: inherit;
+}
+
 .btn {
   cursor: pointer;
 }
@@ -42,9 +56,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: none;
   font-size: 1.5rem;
-  background-color: inherit;
 }
 
 .main {
@@ -99,10 +111,8 @@ body {
 }
 
 .btn-close-modal {
-  border: none;
   font-size: 1.5rem;
   color: red;
-  background-color: inherit;
 }
 
 .modal-body {
@@ -116,4 +126,35 @@ body {
 
 
 /* Sidebar */
-.sidebar {}
+.sidebar {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+  padding: 1rem;
+}
+
+.sidebar-logo {
+  font-size: 2rem;
+}
+
+.btn-close-sidebar {
+  font-size: 1.5rem;
+  color: var(--red-dark);
+}
+
+.sidebar-body {
+  height: 80vh;
+}
+
+.sidebar-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+}
